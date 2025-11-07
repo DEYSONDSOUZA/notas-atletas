@@ -1,7 +1,7 @@
 import { Atleta } from './atleta.js';
 export class Pontuacao extends Atleta {
     constructor(nome, pontos){
-        super(nome);
+        this.nome = nome;
         this.pontos = pontos;
     }
     //calcular media
@@ -11,10 +11,9 @@ export class Pontuacao extends Atleta {
             return a - b; 
         });
         //remover o menor e o maior
-        pontosOrdenados.pop();
-        pontosOrdenados.shift();
+        let pontosValidos = pontosOrdenados.slice(1, 4);
         //calcular a media
-        let soma = pontosOrdenados.reduce(function(total, atual) {
+        let soma = pontosOrdenados.reduce((total, atual) => {
             return total + atual;
         }, 0);
         let media = soma / pontosOrdenados.length;

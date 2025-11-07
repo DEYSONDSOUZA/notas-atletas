@@ -1,9 +1,14 @@
 //exportacao nomeada
 export class Atleta {
-    constructor(nome) {
+    constructor(nome, pontos) {
         this.nome = nome;
+        this.pontos = pontos;
+        this.atletas = [];
     }
-    getNome() {
-        return `Atleta: ${this.nome}`;
+    adcionarAtletas(atleta) {
+        this.atletas.push(nome, pontos);
+    }
+    getResumo() {
+        return `Atleta: ${this.nome} Seus pontos são: ${this.pontos} `;
     }
 }
