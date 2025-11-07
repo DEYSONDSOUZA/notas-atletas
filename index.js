@@ -13,12 +13,12 @@ let atletas = [
  {nome: "Daiane Jelinsky", pontos: [7, 10, 9.5, 9.5, 8]},
  {nome: "Bruno Castro", pontos: [10, 10, 10, 9, 9.5]}
 ];
-atletas.forEach((atleta) => {
-    let atletaObj = new Atleta(atleta.nome, atleta.pontos);
-    atleta.adcionarAtletas(atletaObj);
-    console.log(atleta.getResumo());
-});
-console.log('---------------------');
+atletas.forEach((dadosAtleta) => {
+    let atletaObj = new Atleta(dadosAtleta.nome, dadosAtleta.pontos);
+    atletaObj.adicionarAtleta(atletaObj)
+    let pontuacaoObj = new Pontuacao(dadosAtleta.nome, dadosAtleta.pontos);
+    console.log(pontuacaoObj.getResultado());});
+
 
  
 

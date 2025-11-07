@@ -5,8 +5,8 @@ export class Atleta {
         this.pontos = pontos;
         this.atletas = [];
     }
-    adcionarAtletas(atleta) {
-        this.atletas.push(nome, pontos);
+    adicionarAtleta(atleta) {
+        this.atletas.push(atleta.nome, atleta.pontos);
     }
     getResumo() {
         return `Atleta: ${this.nome} Seus pontos são: ${this.pontos} `;
